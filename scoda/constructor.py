@@ -908,7 +908,7 @@ def parse_muni():
     response = {}
 
     N = M[kwargs['top_tier']].keys()
-    P = [M[kwargs['top_tier']][n] for n in N]
+    P = [M[kwargs['top_tier']][str(n)] for n in N]
     options_list = [[str(n), str(p)] for n, p in zip(N, P)]
 
     response['lower_tier'] = options_list
